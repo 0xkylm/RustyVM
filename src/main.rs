@@ -1,11 +1,13 @@
 
 mod vm; 
-use vm::{VM, create_vm};
+use vm::create_vm;
 
 use crate::vm::vm_loop; 
 
 fn main() {
-    let buf: Vec<i32> = vec![4,2,2,4,1,4,2,2,2];
-    let my_vm = create_vm(buf); 
+    let buf: Vec<i32> = vec![6,0x6C,0,6,0x73,1,7,6,0x6C,0,6,0x73,1,7];
+    let  my_vm = create_vm(buf); 
     vm_loop(my_vm);
+   
+    
 }
